@@ -3,6 +3,7 @@ const socketIO = require('socket.io');
 const http = require('http');
 const bodyParser = require('body-parser');
 const User = require('./models/user');
+const port = process.env.PORT || 3000;
 
 const app = express();
 const server = http.createServer(app);
@@ -46,4 +47,4 @@ io.on('connection', (socket) => {
   socket.on('disconnet', () => console.log('user disconnect'));
 });
 
-server.listen(3000, () => console.log('server working'));
+server.listen(port, () => console.log('server working'));
