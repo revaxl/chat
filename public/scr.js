@@ -7,7 +7,15 @@ socket.on('connect', () => {
    const username = document.querySelector('#username').innerHTML;
    const room = document.querySelector('#room').innerHTML;
    console.log(username, room);
-   socket.emit('join', {username, room});
+   socket.emit('join', {username, room}, function(messages){
+    console.log(messages); 
+    messages.forEach(msg => {
+      const li = document.createElement('li');
+      li.innerHTML = `${msg.name}: ${msg.message}`;
+      li.classList.add('message');
+      ul.appendChild(li);
+    });
+   });
 });
 
 socket.on('disconnect', () => console.log('disconnected'));
