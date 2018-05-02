@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= data.room %></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <div>
+    <div class="info">
+      <h1>chatroom: <span id="room"><%= data.room %></span></h1>
+      <h3>your name: <span id="username"><%= data.username %></span></h3>
+    </div>
+    <div class="container">
+      <ul id="messages">
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+      <form id="chat-form">
+          <input type="text" class="form-control" placeholder="write something" name="message" id="message">
+        </form>
+    </footer>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scr.js"></script>
+</body>
+</html>

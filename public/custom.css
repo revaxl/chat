@@ -1,0 +1,67 @@
+/*** join page ***/
+
+.join {
+  padding-top: 90px;
+}
+.join-form {
+  width: 340px;
+    margin: 50px auto;
+}
+  .join-form form {
+    margin-bottom: 15px;
+      background: #f7f7f7;
+      box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+      padding: 30px;
+  }
+  .join-form h2 {
+      margin: 0 0 15px;
+  }
+  .form-control, .btn {
+      min-height: 38px;
+      border-radius: 2px;
+  }
+  .btn {        
+      font-size: 15px;
+      font-weight: bold;
+  }
+
+/*** chatroom page ***/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+  background-color: #efefef;
+}
+
+.info {
+  background-color: lightblue;
+  margin-top: -20px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+ul {
+  list-style: none;
+}
+
+.message {
+  font-size: large;
+}
+
+.shout {
+  font-size: large;
+  color: indianred;
+  font-weight: bold;
+}
